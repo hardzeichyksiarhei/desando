@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Desando</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+
+	<div id="app" class="wrapper">
+		<div class="container">
+			<div class="col-left">
+				<div class="left-nav">
+					<div class="left-nav__header">
+						<div class="left-nav__user">
+							<i class="fas fa-user-circle left-nav__avatar"></i>
+							<span class="left-nav__name">Александр Вороненко</span>
+						</div>
+					</div>
+					<nav class="left-menu">
+						<ul>
+							<li><a href="#"><i class="fas fa-chart-pie"></i>Статистика</a></li>
+							<li class="active"><a href="#"><i class="fas fa-handshake"></i>Корпорация</a></li>
+							<li><a href="#"><img src="img/institution.svg" alt="">Заведения</a></li>
+							<li><a href="#"><i class="fas fa-list-alt"></i>Меню заведения</a></li>
+							<li><a href="#"><img src="img/table.svg" alt="">Столы</a></li>
+						</ul>
+					</nav>
+					<div class="left-nav__footer">
+						<a href="#" class="left-nav__exit"><i class="fas fa-power-off"></i>Выход</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-right">
+				<div class="top-header">
+					<img class="logo" src="img/logo.svg" alt="">
+				</div>
+				<div class="content institutions">
+					<div class="content-header">
+						<h3 class="content-title">Заведения</h3>
+						<a href="#" class="btn btn--gradient">Добавить</a>
+					</div>
+					<div class="card">
+						<table class="table table-corporations">
+							<thead>
+								<tr>
+									<th width="200"><a href="#">Название <i class="fas fa-angle-down"></i></a></th>
+									<th>Бронь</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Шашлыков</td>
+									<td>
+										<div class="material-switch">
+											<input id="switch1" name="switch1" type="checkbox" checked/>
+											<label for="switch1" class="label-primary"></label>
+										</div>
+									</td>
+									<td><a href="#" class="table-edit">Заведения</a></td>
+								</tr>
+								<tr>
+									<td>Шашлыков</td>
+									<td>
+										<div class="material-switch">
+											<input id="switch2" name="switch2" type="checkbox"/>
+											<label for="switch2" class="label-primary"></label>
+										</div>
+									</td>
+									<td><a href="#" class="table-edit">Заведения</a></td>
+								</tr>
+								<tr>
+									<td>Шашлыков</td>
+									<td>
+										<div class="material-switch">
+											<input id="switch3" name="switch3" type="checkbox" checked/>
+											<label for="switch3" class="label-primary"></label>
+										</div>
+									</td>
+									<td><a href="#" class="table-edit">Заведения</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

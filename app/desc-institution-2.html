@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Desando</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+
+	<div id="app" class="wrapper">
+		<div class="container">
+			<div class="col-left">
+				<div class="left-nav">
+					<div class="left-nav__header">
+						<div class="left-nav__user">
+							<i class="fas fa-user-circle left-nav__avatar"></i>
+							<span class="left-nav__name">Александр Вороненко</span>
+						</div>
+					</div>
+					<nav class="left-menu">
+						<ul>
+							<li><a href="#"><i class="fas fa-chart-pie"></i>Статистика</a></li>
+							<li class="active"><a href="#"><i class="fas fa-handshake"></i>Корпорация</a></li>
+							<li><a href="#"><img src="img/institution.svg" alt="">Заведения</a></li>
+							<li><a href="#"><i class="fas fa-list-alt"></i>Меню заведения</a></li>
+							<li><a href="#"><img src="img/table.svg" alt="">Столы</a></li>
+						</ul>
+					</nav>
+					<div class="left-nav__footer">
+						<a href="#" class="left-nav__exit"><i class="fas fa-power-off"></i>Выход</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-right">
+				<div class="top-header">
+					<img class="logo" src="img/logo.svg" alt="">
+				</div>
+				<div class="content">
+					<h3 class="card-title">Шашлыков, Омск, ул. Гагарина, 4</h3>
+					<div class="card">
+						<form class="form">
+							<div class="form__block">
+								<h4 class="form__title">Обязательные для заполнения поля</h4>
+								<div class="form__group form__group--row">
+									<label for="name-institution" class="form__label">Название заведения</label>
+									<input class="form__control" id="name-institution" placeholder="Введите название">
+								</div>
+								<div class="form__group form__group--row">
+									<label for="city" class="form__label">Введите адрес</label>
+									<multiselect id="city"
+										v-model="selectedCity" :options="optionsCity" :hide-selected="true" :preserve-search="true" placeholder="Город" label="name" track-by="name">
+									</multiselect>
+								</div>
+								<div class="form__group form__group--row">
+									<label for="location-institution" class="form__label">Введите адрес</label>
+									<input class="form__control" id="location-institution" placeholder="Введите адрес">
+								</div>
+								<div class="form__group form__group--row">
+									<label for="phone" class="form__label">Телефон</label>
+									<input class="form__control" id="phone" placeholder="Введите телефон">
+								</div>
+								<div class="form__group form__group--row">
+									<label for="phone" class="form__label">Время работы</label>
+									<div class="work-time">
+										<div class="form__group form__group--row">
+											<label for="monday-1" class="form__label">Понедельник</label>
+											<input class="form__control form__control--sm" id="monday-1" placeholder="00:00">
+											<span class="form__line"></span>
+											<input class="form__control form__control--sm" id="monday-2" placeholder="00:00">
+										</div>
+										<div class="form__group form__group--row">
+											<label for="tuesday-1" class="form__label">Вторник</label>
+											<input class="form__control form__control--sm" id="tuesday-1" placeholder="00:00">
+											<span class="form__line"></span>
+											<input class="form__control form__control--sm" id="tuesday-2" placeholder="00:00">
+										</div>
+										<div class="form__group form__group--row">
+											<label for="wednesday-1" class="form__label">Среда</label>
+											<input class="form__control form__control--sm" id="wednesday-1" placeholder="00:00">
+											<span class="form__line"></span>
+											<input class="form__control form__control--sm" id="wednesday-2" placeholder="00:00">
+										</div>
+										<div class="form__group form__group--row">
+											<label for="thursday-1" class="form__label">Четверг</label>
+											<input class="form__control form__control--sm" id="thursday-1" placeholder="00:00">
+											<span class="form__line"></span>
+											<input class="form__control form__control--sm" id="thursday-2" placeholder="00:00">
+										</div>
+										<div class="form__group form__group--row">
+											<label for="friday-1" class="form__label">Пятница</label>
+											<input class="form__control form__control--sm" id="friday-1" placeholder="00:00">
+											<span class="form__line"></span>
+											<input class="form__control form__control--sm" id="friday-2" placeholder="00:00">
+										</div>
+										<div class="form__group form__group--row">
+											<label for="saturday-1" class="form__label">Суббота</label>
+											<input class="form__control form__control--sm" id="saturday-1" placeholder="00:00">
+											<span class="form__line"></span>
+											<input class="form__control form__control--sm" id="saturday-2" placeholder="00:00">
+										</div>
+										<div class="form__group form__group--row">
+											<label for="sunday-1" class="form__label">Воскресенье</label>
+											<input class="form__control form__control--sm" id="sunday-1" placeholder="00:00">
+											<span class="form__line"></span>
+											<input class="form__control form__control--sm" id="sunday-2" placeholder="00:00">
+										</div>
+										<a href="#" class="form__btn form__btn--no-border form__btn--no-hover form__btn--arrow">Изменить</a>
+									</div>
+								</div>
+								<div class="form__group form__group--row">
+									<label for="description" class="form__label">Описание</label>
+									<textarea rows="6" class="form__control" id="description" placeholder="Описание заведения"></textarea>
+								</div>
+							</div>
+
+							<div class="form__block">
+								<h4 class="form__title">Необязательне поля</h4>
+								<div class="form__group form__group--row form__group--price" data-price="руб.">
+									<label for="average-check" class="form__label">Средний чек</label>
+									<input class="form__control" id="average-check" placeholder="500">
+								</div>
+								<div class="form__group form__group--row">
+									<span class="form__label">Фото</span>
+									<div class="photo-block">
+										<div class="photo-grid">
+											<div id="photo-carousel" class="owl-carousel photo-carousel" data-slider-id="1">
+												<div class="photo-carousel-item"><img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9eb7a97f47b61a9f38ccc09c7f607d01&auto=format&fit=crop&w=1350&q=80" alt=""></div>
+												<div class="photo-carousel-item"><img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9eb7a97f47b61a9f38ccc09c7f607d01&auto=format&fit=crop&w=1350&q=80" alt=""></div>
+												<div class="photo-carousel-item"><img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9eb7a97f47b61a9f38ccc09c7f607d01&auto=format&fit=crop&w=1350&q=80" alt=""></div>
+												<div class="photo-carousel-item"><img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9eb7a97f47b61a9f38ccc09c7f607d01&auto=format&fit=crop&w=1350&q=80" alt=""></div>
+											</div>
+										</div>
+										<div class="form__upload-btn">
+											<input type="file" name="photo" id="photo" />
+											<label for="photo" class="form__btn">Загрузить фото</label>
+										</div>
+									</div>
+								</div>
+								<div class="form__group form__group--row">
+									<span class="form__label">Меню</span>
+									<div class="menu-block">
+										<ul class="menu-list">
+											<li class="menu-шеуь">
+												<a href="#" class="menu-item__name">Меню_октябрь2018.pdf</a>
+												<a href="#" class="menu-item__remove">Удалить</a>
+											</li>
+										</ul>
+										<div class="form__upload-btn">
+											<input type="file" name="menu" id="menu" />
+											<label for="menu" class="form__btn">Загрузить меню</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-btn-block">
+								<a href="#" class="btn btn--gradient">Сохранить</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="work-time" class="lity-hide work-time-popup">
+		<h3 class="work-time-popup__title">Выбрать время работы</h3>
+		<form action="" class="form">
+			<div class="form__block">
+				<div class="form__group form__group--row">
+					<label for="monday-1" class="form__label">Понедельник</label>
+					<input class="form__control form__control--sm" id="monday-1" placeholder="00:00">
+					<span class="form__line"></span>
+					<input class="form__control form__control--sm" id="monday-2" placeholder="00:00">
+				</div>
+				<div class="form__group form__group--row">
+					<label for="tuesday-1" class="form__label">Вторник</label>
+					<input class="form__control form__control--sm" id="tuesday-1" placeholder="00:00">
+					<span class="form__line"></span>
+					<input class="form__control form__control--sm" id="tuesday-2" placeholder="00:00">
+				</div>
+				<div class="form__group form__group--row">
+					<label for="wednesday-1" class="form__label">Среда</label>
+					<input class="form__control form__control--sm" id="wednesday-1" placeholder="00:00">
+					<span class="form__line"></span>
+					<input class="form__control form__control--sm" id="wednesday-2" placeholder="00:00">
+				</div>
+				<div class="form__group form__group--row">
+					<label for="thursday-1" class="form__label">Четверг</label>
+					<input class="form__control form__control--sm" id="thursday-1" placeholder="00:00">
+					<span class="form__line"></span>
+					<input class="form__control form__control--sm" id="thursday-2" placeholder="00:00">
+				</div>
+				<div class="form__group form__group--row">
+					<label for="friday-1" class="form__label">Пятница</label>
+					<input class="form__control form__control--sm" id="friday-1" placeholder="00:00">
+					<span class="form__line"></span>
+					<input class="form__control form__control--sm" id="friday-2" placeholder="00:00">
+				</div>
+				<div class="form__group form__group--row">
+					<label for="saturday-1" class="form__label">Суббота</label>
+					<input class="form__control form__control--sm" id="saturday-1" placeholder="00:00">
+					<span class="form__line"></span>
+					<input class="form__control form__control--sm" id="saturday-2" placeholder="00:00">
+				</div>
+				<div class="form__group form__group--row">
+					<label for="sunday-1" class="form__label">Воскресенье</label>
+					<input class="form__control form__control--sm" id="sunday-1" placeholder="00:00">
+					<span class="form__line"></span>
+					<input class="form__control form__control--sm" id="sunday-2" placeholder="00:00">
+				</div>
+			</div>
+
+			<div class="form-btn-block">
+				<a href="#" class="btn btn--accent">Подтвердить</a>
+			</div>
+		</form>
+		<button class="work-time-popup__close"><img src="img/close.svg" alt="Close" data-lity-close></button>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

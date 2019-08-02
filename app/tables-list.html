@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Desando</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+
+	<div id="app" class="wrapper">
+		<div class="container">
+			<div class="col-left">
+				<div class="left-nav">
+					<div class="left-nav__header">
+						<div class="left-nav__user">
+							<i class="fas fa-user-circle left-nav__avatar"></i>
+							<span class="left-nav__name">Александр Вороненко</span>
+						</div>
+					</div>
+					<nav class="left-menu">
+						<ul>
+							<li><a href="#"><i class="fas fa-chart-pie"></i>Статистика</a></li>
+							<li class="active"><a href="#"><i class="fas fa-handshake"></i>Корпорация</a></li>
+							<li><a href="#"><img src="img/institution.svg" alt="">Заведения</a></li>
+							<li><a href="#"><i class="fas fa-list-alt"></i>Меню заведения</a></li>
+							<li><a href="#"><img src="img/table.svg" alt="">Столы</a></li>
+						</ul>
+					</nav>
+					<div class="left-nav__footer">
+						<a href="#" class="left-nav__exit"><i class="fas fa-power-off"></i>Выход</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-right">
+				<div class="top-header">
+					<img class="logo" src="img/logo.svg" alt="">
+				</div>
+				<div class="content tables-list">
+					<div class="content-header">
+						<h3 class="content-title">Столы</h3>
+						<form action="" class="form">
+							<multiselect id="city"
+								v-model="selectedNameInstitution" :options="optionsNameInstitution" :hide-selected="true" :preserve-search="true" placeholder="Заведение" label="name" track-by="name">
+							</multiselect>
+							<multiselect id="city"
+								v-model="selectedNameInstitution" :options="optionsNameInstitution" :hide-selected="true" :preserve-search="true" placeholder="Город" label="name" track-by="name">
+							</multiselect>
+							<multiselect id="city"
+								v-model="selectedCityInstitution" :options="optionsCityInstitution" :hide-selected="true" :preserve-search="true" placeholder="Адрес" label="name" track-by="name">
+							</multiselect>
+						</form>
+					</div>
+					<!-- <div class="pins-block">
+						<ul class="pins-list">
+							<li class="pin-item" v-if="selectedNameInstitution">
+								{{ selectedNameInstitution.name }}
+								<a href="#" class="pin-close" @click.prevent="selectedNameInstitution = ''"><img src="img/close-white.svg" alt=""></a>
+							</li>
+							<li class="pin-item" v-if="selectedCityInstitution">
+								{{ selectedCityInstitution.name }}
+								<a href="#" class="pin-close" @click.prevent="selectedCityInstitution = ''"><img src="img/close-white.svg" alt=""></a>
+							</li>
+						</ul>
+					</div> -->
+					<div class="card">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>№ стола</th>
+									<th>Вместимость</th>
+									<th>Описание</th>
+									<th>Бронирование</th>
+									<th>Активность</th>
+									<th>Фото</th>
+									<th>Данные о столе</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>15</td>
+									<td>Какое-то описание для данного стола</td>
+									<td>
+										<div class="material-switch">
+											<input id="switch1" name="switch1" type="checkbox"/>
+											<label for="switch1" class="label-primary"></label>
+										</div>
+									</td>
+									<td>
+										<div class="material-switch">
+											<input id="switch2" name="switch2" type="checkbox" checked/>
+											<label for="switch2" class="label-primary"></label>
+										</div>
+									</td>
+									<td><a href="#" class="table-photo"><i class="fas fa-camera"></i>Удалить</a></td>
+									<td>
+										<a href="#" class="table-edit">Редактировать</a>
+										<a href="#" class="table-remove">Удалить</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>4</td>
+									<td>Какое-то описание для данного стола</td>
+									<td>
+										<div class="material-switch">
+											<input id="switch3" name="switch3" type="checkbox" checked/>
+											<label for="switch3" class="label-primary"></label>
+										</div>
+									</td>
+									<td>
+										<div class="material-switch">
+											<input id="switch4" name="switch4" type="checkbox"/>
+											<label for="switch4" class="label-primary"></label>
+										</div>
+									</td>
+									<td><a href="#" class="table-photo null"><i class="fas fa-camera"></i>Загрузить</a></td>
+									<td>
+										<a href="#" class="table-edit">Редактировать</a>
+										<a href="#" class="table-remove">Удалить</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

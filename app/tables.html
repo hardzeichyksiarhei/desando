@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Desando</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+
+	<div id="app" class="wrapper">
+		<div class="container">
+			<div class="col-left">
+				<div class="left-nav">
+					<div class="left-nav__header">
+						<div class="left-nav__user">
+							<i class="fas fa-user-circle left-nav__avatar"></i>
+							<span class="left-nav__name">Александр Вороненко</span>
+						</div>
+					</div>
+					<nav class="left-menu">
+						<ul>
+							<li><a href="#"><i class="fas fa-chart-pie"></i>Статистика</a></li>
+							<li class="active"><a href="#"><i class="fas fa-handshake"></i>Корпорация</a></li>
+							<li><a href="#"><img src="img/institution.svg" alt="">Заведения</a></li>
+							<li><a href="#"><i class="fas fa-list-alt"></i>Меню заведения</a></li>
+							<li><a href="#"><img src="img/table.svg" alt="">Столы</a></li>
+						</ul>
+					</nav>
+					<div class="left-nav__footer">
+						<a href="#" class="left-nav__exit"><i class="fas fa-power-off"></i>Выход</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-right">
+				<div class="top-header">
+					<img class="logo" src="img/logo.svg" alt="">
+				</div>
+				<div class="content tables">
+					<div class="content-header">
+						<h3 class="content-title">Заведения</h3>
+						<form action="" class="form">
+							<multiselect id="city"
+								v-model="selectedNameInstitution" :options="optionsNameInstitution" :hide-selected="true" :preserve-search="true" placeholder="Корпорация" label="name" track-by="name">
+							</multiselect>
+							<multiselect id="city"
+								v-model="selectedNameInstitution" :options="optionsNameInstitution" :hide-selected="true" :preserve-search="true" placeholder="Название" label="name" track-by="name">
+							</multiselect>
+							<multiselect id="city"
+								v-model="selectedCityInstitution" :options="optionsCityInstitution" :hide-selected="true" :preserve-search="true" placeholder="Город" label="name" track-by="name">
+							</multiselect>
+						</form>
+					</div>
+					<div class="pins-block">
+						<ul class="pins-list">
+							<li class="pin-item" v-if="selectedNameInstitution">
+								{{ selectedNameInstitution.name }}
+								<a href="#" class="pin-close" @click.prevent="selectedNameInstitution = ''"><img src="img/close-white.svg" alt=""></a>
+							</li>
+							<li class="pin-item" v-if="selectedCityInstitution">
+								{{ selectedCityInstitution.name }}
+								<a href="#" class="pin-close" @click.prevent="selectedCityInstitution = ''"><img src="img/close-white.svg" alt=""></a>
+							</li>
+						</ul>
+					</div>
+					<div class="card">
+						<div class="card__body">
+							<div class="alert alert--error">
+								<h4 class="alert__title">Необходимо добавить столы</h4>
+								<p class="alert__text">К данному заведению не привязаны столы.<br>Вы можете добавить столы и продолжить работу. </p>
+							</div>
+							<a href="#" class="btn btn--arrow">Добавить столы</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

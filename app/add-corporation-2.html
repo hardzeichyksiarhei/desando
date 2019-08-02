@@ -1,0 +1,126 @@
+ <!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Desando</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+
+	<div id="app" class="wrapper">
+		<div class="container">
+			<div class="col-left">
+				<div class="left-nav">
+					<div class="left-nav__header">
+						<div class="left-nav__user">
+							<i class="fas fa-user-circle left-nav__avatar"></i>
+							<span class="left-nav__name">Александр Вороненко</span>
+						</div>
+					</div>
+					<nav class="left-menu">
+						<ul>
+							<li><a href="#"><i class="fas fa-chart-pie"></i>Статистика</a></li>
+							<li class="active"><a href="#"><i class="fas fa-handshake"></i>Корпорация</a></li>
+							<li><a href="#"><img src="img/institution.svg" alt="">Заведения</a></li>
+							<li><a href="#"><i class="fas fa-list-alt"></i>Меню заведения</a></li>
+							<li><a href="#"><img src="img/table.svg" alt="">Столы</a></li>
+						</ul>
+					</nav>
+					<div class="left-nav__footer">
+						<a href="#" class="left-nav__exit"><i class="fas fa-power-off"></i>Выход</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-right">
+				<div class="top-header">
+					<img class="logo" src="img/logo.svg" alt="">
+				</div>
+				<div class="content add-corporation">
+					<div class="card">
+						<div class="card__body">
+							<div class="tabs add-corporation-tabs">
+								<ul class="tabs-menu">
+									<li class="active"><a href="#tab-1">R-Keeper</a></li>
+									<li><a href="#tab-2">Poster</a></li>
+								</ul>
+								<div id="tab-1" class="tab">
+									<div class="keeper-block">
+										<div class="alert alert--info">
+											<h4 class="alert__title">Для подключения вашей корпорации к сервису Desando</h4>
+											<p class="alert__text">
+												1. Свяжитесь с вашим дилером и попросите выдать вам учетные данные для подключения к White Server<br>
+												2. Введите данные доступа к White Server и нажмите кнопку Сохранить
+											</p>
+										</div>
+										<form class="form register-keeper-form">
+											<div class="form__block">
+												<div class="form__group form__group--row form__group--error">
+													<label for="login" class="form__label">Логин</label>
+													<div class="form__feedback">
+														<small class="form__error">Введены неправильные данные</small>
+														<input type="text" class="form__control" id="login" placeholder="Введите логин...">
+													</div>
+												</div>
+												<div class="form__group form__group--row">
+													<label for="password" class="form__label">Пароль</label>
+													<input type="text" class="form__control" id="password" placeholder="Введите пароль ...">
+												</div>
+												<div class="form__group form__group--row">
+													<label for="license" class="form__label">Лицензия</label>
+													<input type="text" class="form__control" id="license" placeholder="Введите лицензию...">
+												</div>
+												<div class="form__group form__group--row">
+													<label for="token" class="form__label">Token</label>
+													<input type="text" class="form__control" id="token" placeholder="Введите token...">
+												</div>
+												<div class="form__group form__group--row">
+													<label for="address-ws" class="form__label">Адрес WS</label>
+													<input type="text" class="form__control" id="address-ws" placeholder="Адрес WS...">
+												</div>
+											</div>
+				
+											<div class="form-btn-block">
+												<a href="#" class="btn btn--gradient">Сохранить</a>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div id="tab-2" class="tab">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt tempore rerum minus labore distinctio debitis explicabo pariatur adipisci impedit odit possimus reiciendis accusamus ullam nostrum expedita accusantium, veritatis fugiat quam optio ducimus, odio perspiciatis. Vel quam explicabo alias asperiores ipsa maiores quisquam, tempore dolorum iste deserunt inventore consequuntur. Non ea beatae fuga voluptatibus, eum quas consequatur. Optio ratione saepe aperiam asperiores nihil fuga accusamus qui repellat sapiente ut perspiciatis quisquam, sequi minus fugit dicta quae voluptatum alias ipsa modi? Vero voluptate optio natus praesentium magnam cumque doloremque eius recusandae nam voluptatum, accusamus harum! Labore dolores ducimus sit deleniti, repellendus commodi?
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

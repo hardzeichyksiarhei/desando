@@ -1,0 +1,32 @@
+{
+  "name": "optimizedhtml",
+  "version": "4.0.0",
+  "description": "OptimizedHTML 4 - Start HTML Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "WebDesign Master",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "lity": "^2.3.1",
+    "normalize.css": "^8.0.0",
+    "owl.carousel": "^2.3.4",
+    "owl.carousel2.thumbs": "^0.1.8",
+    "vue": "^2.5.17",
+    "vue-multiselect": "^2.1.0"
+  }
+}
